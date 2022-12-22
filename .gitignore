@@ -1,4 +1,4 @@
 .DS_Store
 .build
 workspace/*
-trimuismart-toolchain.tar.xz
+rg35xx-toolchain.tar.xz
