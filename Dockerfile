@@ -12,6 +12,7 @@ RUN apt-get -y update && apt-get -y install \
 	cmake \
 	cmake-curses-gui \
 	cpio \
+	device-tree-compiler \
 	git \
 	libncurses5-dev \
 	locales \
