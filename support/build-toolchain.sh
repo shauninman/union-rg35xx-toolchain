@@ -19,13 +19,16 @@ tar -xf ./$BUILDROOT_NAME.tar.gz
 rm -f ./$BUILDROOT_NAME.tar.gz
 mv ./$BUILDROOT_NAME ./buildroot
 
-# patches for build root packages
+# patches for buildroot packages
 cd ~/patches
 for FILE in $(find . -type f -name "*.patch" 2>/dev/null); do
 	cp $FILE ~/buildroot/$FILE
 done
 
 cd ~/buildroot
+# patches for buildroot itself
+patch -p1 < ~/toolchain-expose-BR2_TOOLCHAIN_EXTRA_EXTERNAL_LIBS-for-all-toolchain-types-2017.11.1.diff
+
 cp ~/rg35xx-buildroot-$BUILDROOT_VERSION.config ./.config
 if [ -f ~/rg35xx-toolchain.tar.xz ]; then
  	tar -xf ~/rg35xx-toolchain.tar.xz -C /opt
