@@ -19,11 +19,13 @@ RUN apt-get -y update && apt-get -y install \
 	make \
 	p7zip-full \
 	rsync \
+	sharutils \
 	scons \
 	tree \
 	unzip \
 	vim \
 	wget \
+	zip \
   && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /root/workspace
