@@ -14,6 +14,7 @@ RUN apt-get -y update && apt-get -y install \
 	cpio \
 	device-tree-compiler \
 	git \
+	imagemagick \
 	libncurses5-dev \
 	locales \
 	make \
